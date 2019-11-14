@@ -1,0 +1,180 @@
+.rubik {
+    margin: 100px auto;
+    position: relative;
+    width: 250px;
+    top: 0;
+    left: 0;
+    animation: main 2s 1.5s infinite; /* main animation */
+}
+
+[class^="rubs"] {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(233, 205, 168);
+    display: inline-block;
+    margin: 15px;
+    position: relative;
+}
+
+.rubs4 {background-color: coral;}
+
+/* rub2 animation */
+@keyframes rubs2 {
+    0% {
+        top: -60px;
+        height: 0;
+    }
+    100% {
+        top: 0;
+        height: 50px;
+    }
+}
+.rubs2 {animation: rubs2 2s infinite;}
+
+/* rub3 animation */
+@keyframes rubs3 {
+    0% {
+        right: -60px;
+        width: 0;
+    }
+    25% {
+        right: 0;
+        width: 50px;
+    }
+    50% {
+        right: 90px;
+        width: 50px;
+    }
+    51% {
+        width: 0;
+        right: -60px;
+    }
+    100% {
+        width: 0;
+        right: -60px;
+    }
+}
+
+.rubs3 {animation: rubs3 2s 0.5s infinite ease-in;}
+
+/* rub 5 and 6 */
+@keyframes rubs56 {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: -85px;
+    }
+    50% {
+        top: 0;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.rubs5, .rubs6 {animation: rubs56 2s 1.5s infinite;}
+
+/* rub 9 */
+@keyframes rubs9 {
+    0% {
+        right: -60px;
+        width: 0;
+    }
+    25% {
+        right: 0;
+        width: 50px;
+        top: 0;
+    }
+    50% {
+        top: -85px;
+        width: 50px;
+    }
+    75% {
+        top: 0;
+        left: 0;
+        width: 50px;
+    }
+    80% {
+        left: -35px;
+    }
+    100% {
+        left: -35px;
+        width: 0;
+    }
+}
+
+.rubs9 {
+    animation: rubs9 2s 1s infinite;
+    background-color: SkyBlue;
+}
+
+/* rub 8 */
+@keyframes rubs8 {
+    0% {
+        height: 0;
+        bottom: -60px;
+    }
+    25% {
+        bottom: 0;
+        height: 50px;
+    }
+    50% {
+        height: 50px;
+        background-color: red;
+    }
+    75% {
+        height: 50px;
+        left: 0;
+        background-color: rgb(233, 205, 168);
+    }
+    100% {
+        height: 50px;
+        left: -85px;
+        background-color:  rgb(233, 205, 168);
+    }
+}
+.rubs8 {
+    background-color: red;
+    animation: rubs8 2s 1.5s infinite;
+}
+
+/* main animation */
+@keyframes main {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    12.5%{
+        top: -15px;
+        left: 0;
+    }
+    25%{
+        top: 0;
+        left: 0;
+    }
+    37.5%{
+        top: 15px;
+        left: 0;
+    }
+    50%{
+        top: 0;
+        left: 0;
+    }
+    62.5%{
+        top: 0;
+        left: -15px;
+    }
+    75%{
+        top: 0;
+        left: 0;
+    }
+    87.5%{
+        top: 0;
+        left: -15px;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
